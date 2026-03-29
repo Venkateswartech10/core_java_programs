@@ -1,11 +1,11 @@
 package com.venkat.java.general.patterns;
 
 /*
-A 
-B B 
-C C C 
-D D D D 
-E E E E E    
+    A    
+   ABA   
+  ABCBA  
+ ABCDCBA 
+ABCDEDCBA    
 */
 
 /*1.For the outer loop, count the no of lines.
