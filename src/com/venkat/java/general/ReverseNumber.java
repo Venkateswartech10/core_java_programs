@@ -11,18 +11,19 @@ public class ReverseNumber {
 	private static int reverseNumber(int num) {
 		// number can be +ve or -ve integer . Convert -ve to +ve integer by Math.abs()
 		// function.
-		int positiveNum = Math.abs(num);
+		int positiveNum = Math.abs(num); // positiveNum = 123
 		// Convert number to String
-        String numberStr = String.valueOf(positiveNum);
-		StringBuffer sb = new StringBuffer(numberStr).reverse();
+        String numberStr = String.valueOf(positiveNum); // numberStr = "123"
+		//Convert string to String buffer to reverse a string using reverse()
+		StringBuffer sb = new StringBuffer(numberStr).reverse(); // sb = "321"
 		// convert back from String buffer to integer
 		int reversedNumber = 0;
 		try {
-			reversedNumber = Integer.parseInt(sb.toString());
+			reversedNumber = Integer.parseInt(sb.toString()); //reversedNumber = 321
 		}catch(NumberFormatException npe) {
 			System.out.println(npe);
 		}
-		return num < 0 ? -reversedNumber : reversedNumber;
+		return num < 0 ? -reversedNumber : reversedNumber; // returns -321
 	}
 
 }
