@@ -1,0 +1,35 @@
+package com.venkat.java.general;
+
+public class PalindromeTest {
+    public static void main(String[] args) {
+        int num = -121;
+        boolean isPalindrome = testPalindrome(num); //-121 - if we reverse this we will get 121- so this is not a palindrome
+        if (isPalindrome)
+            System.out.println("The given number is palindrome");
+        else
+            System.out.println("The given number is not a palindrome");
+    }
+
+    private static boolean testPalindrome(int num) {
+        if (num < 0) // if number 0 or -ve numbers then we will return false
+            return false;
+        //Store input value in another variable as we are playing/modifying the input value
+        int givenNumber = num;
+        //initialize revereNumber with default value
+        int reverseNumber = 0;
+        //Loop the input number until we get num zero.
+        while (num > 0) {
+            //first get the last digit by modulo operation & keep that value in remainder
+            int remainder = num % 10;
+            //We are doing modulo operation to take last digit so we multiply with 10 to get the value in reverse order.
+            reverseNumber = reverseNumber * 10 + remainder;
+            //divide the number with 10 to get the divisor by removing last digit.
+            num = num / 10;
+        }
+        //compare the reversed number with given number & return true if they are equal else return false.
+        if (givenNumber == reverseNumber)
+            return true;
+        else
+            return false;
+    }
+}
