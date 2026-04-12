@@ -25,8 +25,7 @@ public class PrintAllDivisors {
 				// One factor is i if the number is divisible by i & the other factor is num / i
 				// System.out.print(i);
 				list.add(i);
-				// As we already added 1 disisor in list . To avoid duplicate insertion we have
-				// if condition
+				// As we already added 1 disisor in list . To avoid duplicate insertion we have if condition
 				if (i != num / i) {
 					list.add(num / i);
 					// System.out.print(num / i);
