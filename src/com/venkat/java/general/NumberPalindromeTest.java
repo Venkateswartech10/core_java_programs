@@ -1,7 +1,9 @@
 package com.venkat.java.general;
 
-public class PalindromeTest {
-    public static void main(String[] args) {
+public class NumberPalindromeTest {
+
+	public static void main(String[] args) {
+		//Given number can be +ve or -ve number.
         int num = -121;
         boolean isPalindrome = testPalindrome(num); //-121 - if we reverse this we will get 121- so this is not a palindrome
         if (isPalindrome)
@@ -9,8 +11,8 @@ public class PalindromeTest {
         else
             System.out.println("The given number is not a palindrome");
     }
-
-    private static boolean testPalindrome(int num) {
+	
+	private static boolean testPalindrome(int num) {
         if (num < 0) // if number 0 or -ve numbers then we will return false
             return false;
         //Store input value in another variable as we are playing/modifying the input value
@@ -32,4 +34,5 @@ public class PalindromeTest {
         else
             return false;
     }
+
 }
