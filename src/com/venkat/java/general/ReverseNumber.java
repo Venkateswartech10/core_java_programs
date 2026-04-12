@@ -9,8 +9,7 @@ public class ReverseNumber {
 	}
 
 	private static int reverseNumber(int num) {
-		// number can be +ve or -ve integer . Convert -ve to +ve integer by Math.abs()
-		// function.
+		// number can be +ve or -ve integer . Convert -ve to +ve integer by Math.abs() function.
 		int positiveNum = Math.abs(num); // positiveNum = 123
 		// Convert number to String
         String numberStr = String.valueOf(positiveNum); // numberStr = "123"
