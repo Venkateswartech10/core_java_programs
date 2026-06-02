@@ -16,22 +16,18 @@ public class StockBuyAndSell {
 	
 	// Function to calculate maximum profit using single pass
 	private static int stockBuySellOptimal(int[] prices) {
-		// Initialize the minimum price to a large number
-		int minPrice = Integer.MAX_VALUE;
-
+		// Initialize the mini with starting value
+		int mini = prices[0]; // mini = 7
 		// Initialize the maximum profit to 0
 		int maxProfit = 0;
-
 		// Traverse each price in the array
-		for (int price : prices) {
-			// If current price is less than minPrice, update minPrice
-			if (price < minPrice) {
-				minPrice = price;
-			}
-			// Else calculate profit and update maxProfit if it's greater
-			else {
-				maxProfit = Math.max(maxProfit, price - minPrice);
-			}
+		for (int i = 1; i < prices.length; i++) {
+			// Find the profit of that day
+			int profit = prices[i] - mini;
+			// Update the max profit
+			maxProfit = Math.max(maxProfit, profit);
+			// find the minimum from that day to start
+			mini = Math.min(mini, prices[i]);
 		}
 
 		// Return the maximum profit found
